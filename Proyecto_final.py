@@ -2,38 +2,46 @@
 #Creación de clase:
 
 class Employee():
-    def __init__(self, name, surname)
-                 #, age, sal, id, dateini 
+    def __init__(self, name, surname, age, sal, id, date_vin):
         self.__name = name
         self.__surname = surname
-        #self.__age = age
-        #self.__sal = sal
-        #self.__id = id
-        #self.__dateini = dateini
+        self.__age = age
+        self.__sal = sal
+        self.__id = id
+        self.__date_vin = date_vin
         
         
     def getFullname(self):
         return f"{self.__name}, {self.__surname}" 
-        
-    def getName(self):
-        return self.__name   
     
     def getAge(self):
         return self.__age
     
-    def getDate(self):
-        return self.__dateini
+    def getSal(self):
+        return f"Empleado: {self.getFullname()}, Salario: {self.__sal}"
     
-    def setAge(self, age):
-        set.__age = age  
+    def getID(self):
+        return self.__id
+    
+    def getDate_vin(self):
+        return self.__date_vin
+    
+    def getFullInfo(self):
+        return (f"Nombre: {self.getFullname()}, Edad: {self.__age}, Salario: {self.__sal}, Identificación ID: {self.__id}, Fecha de vinculación: {self.__date_vin}\n")
+    
+    
     
 class Boss(Employee):
-    def __init__(self, name, surname, age, sal, id, dateini, employeeAC):
-        super().__init__(name, surname, age, sal, id, dateini)
-        listaEmp = []
+    def __init__(self, name, surname, age, sal, id, date_vin):
+        super().__init__(name, surname, age, sal, id, date_vin)
+        self.listaEmpAC = []
         
-    def addEmp(listaEmp):
-        listaEmp.append(input("Nombre del empleado: "))
+    def addEmp(self, employee):
+        for emp in self.listaEmpAC:
+            if emp == employee:
+                print(f"Empleado {employee.getFullname()}" se encuentra a cargo del jefe {self.getFullname()}".)
+                      return 
+                
         
         #self.EmployeeCharged = employeeAC
         
